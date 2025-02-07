@@ -1,0 +1,17 @@
+.options {
+  display: flex;
+  gap: 16px;
+  min-width: 96px;
+}
+
+.counterButton {
+  min-width: 96px;
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.counterButton:hover {
+  background-color: rgba(83, 83, 83, 0.281);
+  border-color: black;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
