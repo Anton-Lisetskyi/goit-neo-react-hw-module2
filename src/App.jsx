@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Description from './Description/Description';
-import Options from './Options/Options';
-import Feedback from './Feedback/Feedback';
-import Notification from './Notification/Notification';
+import Description from './Components/Description/Description';
+import Options from './Components/Options/Options';
+import Feedback from './Components/Feedback/Feedback';
+import Notification from './Components/Notification/Notification';
 
 function App() {
   const [goodRev, setGoodRev] = useState(
