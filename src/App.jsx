@@ -52,7 +52,11 @@ function App() {
   return (
     <>
       <Description />
-      <Options updateFeedback={updateFeedback} onReset={resetAll} />
+      <Options
+        updateFeedback={updateFeedback}
+        onReset={resetAll}
+        totalFeedback={totalFeedback}
+      />
       {totalFeedback > 0 ? (
         <Feedback
           good={goodRev}

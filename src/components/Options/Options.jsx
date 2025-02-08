@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Options.module.css';
 
-const Options = ({ updateFeedback, onReset }) => {
+const Options = ({ updateFeedback, onReset, totalFeedback }) => {
   return (
     <div className={styles.options}>
       <button
@@ -23,9 +22,12 @@ const Options = ({ updateFeedback, onReset }) => {
       >
         Bad
       </button>
-      <button className={styles.counterButton} onClick={onReset}>
-        Reset
-      </button>
+
+      {totalFeedback > 0 && (
+        <button className={styles.counterButton} onClick={onReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };
@@ -33,6 +35,7 @@ const Options = ({ updateFeedback, onReset }) => {
 Options.propTypes = {
   updateFeedback: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
+  totalFeedback: PropTypes.func.isRequired,
 };
 
 export default Options;
